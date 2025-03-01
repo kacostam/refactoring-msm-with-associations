@@ -10,4 +10,6 @@
 #  movie_id   :integer
 #
 class Character < ApplicationRecord
+
+  has_many(:movie, class_name: "Movie", foreign_key: "id", primary_key: "movie_id" )
 end
