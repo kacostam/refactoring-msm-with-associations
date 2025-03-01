@@ -11,7 +11,6 @@
 #
 class Character < ApplicationRecord
 
-  has_many(:movie, class_name: "Movie", foreign_key: "id", primary_key: "movie_id" )
-
-  has_many(:actor, class_name: "Actor", foreign_key: "id", primary_key: "actor_id" )
+  belongs_to(:movie, :class_name => "Movie", :foreign_key => "movie_id")
+  belongs_to(:actor, :class_name => "Actor", :foreign_key => "actor_id")
 end
